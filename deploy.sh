@@ -2,12 +2,12 @@ docker build -t enigmae/multi-client:latest -t enigmae/multi-client:$SHA -f ./cl
 docker build -t enigmae/multi-server:latest -t enigmae/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t enigmae/multi-worker:latest -t enigmae/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
-docker push enigmae/mutli-client:latest
-docker push enigmae/mutli-server:latest
-docker push enigmae/mutli-worker:latest
-docker push enigmae/mutli-client:$SHA
-docker push enigmae/mutli-server:$SHA
-docker push enigmae/mutli-worker:$SHA
+docker push enigmae/multi-client:latest
+docker push enigmae/multi-server:latest
+docker push enigmae/multi-worker:latest
+docker push enigmae/multi-client:$SHA
+docker push enigmae/multi-server:$SHA
+docker push enigmae/multi-worker:$SHA
 
 kubectl apply -f k8s
 
