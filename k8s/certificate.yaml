@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: vispire-io-tls
+spec:
+  secretName: vispire-io
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: vispire.io
+  dnsNames:
+    - vispire.io
+    - www.vispire.io
